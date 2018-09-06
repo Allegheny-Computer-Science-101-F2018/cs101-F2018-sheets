@@ -31,9 +31,9 @@
 
 % Commands to describe key development tasks
 
-% --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+% --> Running gatorgrader
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running and testing program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -340,120 +340,168 @@ code for this assignment. For instance, if the course instructor ran the
   git clone git@github.com:Allegheny-Computer-Science-101-F2018/computer-science-101-fall-2018-lab-1-gkapfham.git
 \end{lstlisting}
 
-After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
-one directory from your current location, then you can type the command \command{cd ..}. Please continue to use the
-\command{cd} and \command{ls} commands to explore the files that you automatically downloaded from GitHub. What files
-and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
-a neighbor and a \mbox{teaching assistant}.
+After this command finishes, you can use \command{cd} to change into the new
+directory. If you want to \step{go back} one directory from your current
+location, then you can type the command \command{cd ..}. Please continue to use
+the \command{cd} and \command{ls} commands to explore the files that you
+automatically downloaded from GitHub. What files and directories do you see?
+What do you think is their purpose? Spend some time exploring, sharing your
+discoveries with a neighbor and a \mbox{teaching assistant}.
 
 \section*{Enhancing and Testing a Java Program}
 
-In order view the source code of a Java program or a Markdown-based writing assignment, you need a text editor. There
-are many different text editors on your workstation and you should feel free to explore these on your own. For instance,
-you may adopt either the GVim or the Atom text editor to complete this laboratory assignment. Please study the source
-code of the \mainprogram, noticing that some of its methods are incomplete. You can refer to the Code Fragments in the
-textbook to discover the missing source code and add it back into the program. Next, you should also notice that the
-\mainprogram{} has a test suite called \testprogram{} that is written in the JUnit testing framework; please refer to
-Section 1.9 and the comments in the source code of this test suite to learn more about how it works. Intuitively, a
-Junit test suite has individual test cases, written as Java methods, that each work to establish a confidence in the
-correctness of \mainprogram{}.
+In order view the source code of a Java program or a Markdown-based writing
+assignment, you need a text editor. There are many different text editors on
+your workstation and you should feel free to explore them on your own. For
+instance, you may adopt either the GVim or the Atom text editor to complete this
+laboratory assignment. Please study the source code of the \mainprogram,
+noticing that some of its methods are incomplete. You can refer to the Code
+Fragments in the textbook to discover the missing source code and add it back
+into the program. Next, you should also notice that the \mainprogram{} has a
+test suite called \testprogram{} that is written in the JUnit testing framework;
+please refer to Section 1.9 and the comments in the source code of this test
+suite to learn more about how it works. Intuitively, a JUnit test suite has
+individual test cases, written as Java methods, that each work to establish a
+confidence in the correctness of \mainprogram{}.
 
-Now, if you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing
-the Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back to
-your text editor and figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
-error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
-If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor. You can also
-run the test suite for the \mainprogram{} by typing \gradletest{} in the terminal. What is the purpose of each of these
-test cases? What output do you see from running the test suite? Does this output suggest that the program is likely to
-produce the correct output? How did you know?
+Now, if you want to \step{build} your program you can type the command
+\gradlebuild{} in your terminal, thereby causing the Java compiler to check your
+program for errors and get it ready to run. If you get any error messages, go
+back to your text editor and figure out what you mis-typed and fix it. Once you
+have solved the problem, make a note of the error and the solution for resolving
+it. Re-save your program and then build it again by re-running the
+\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
+with a teaching assistant or the instructor. You can also run the test suite for
+the \mainprogram{} by typing \gradletest{} in the terminal. What is the purpose
+of each of these test cases? What output do you see from running the test suite?
+Does this output suggest that the program is likely to produce the correct
+output? How did you know?
 
-Once you resolve all of the building and testing errors, you can run your program by typing \gradlerun{} in the terminal
-window---this is the ``execute'' step that will run your program and produce the designated output. You can see if your
-program is producing the desired output by looking at Code Fragment 1.7. Do you see that it produces twenty lines of
-output? Can you see that it computes the correct numerical values? If not, then repair the program and re-build and
-re-run it. Once the program runs, please reflect on this process. What step did you find to be the most challenging?
-Why? You should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. You can
-learn more about Markdown by viewing the aforementioned GitHub guide. To complete this aspect of the assignment, you
-should write one high-quality paragraph that reports on your experiences. Your \reflection{} should also contain answers
-to other questions, about \mainprogram{}, posed at the end of this assignment sheet.
+Once you resolve all of the building and testing errors, you can run your
+program by typing \gradlerun{} in the terminal window---this is the ``execute''
+step that will run your program and produce the designated output. You can see
+if your program is producing the desired output by looking at Code Fragment 1.7.
+Do you see that it produces twenty lines of output? Can you see that it computes
+the correct numerical values? If not, then repair the program and re-build and
+re-run it. Once the program runs, please reflect on this process. What step did
+you find to be the most challenging? Why? You should write your reflections in a
+file, called \reflection{}, that uses the Markdown writing language. You can
+learn more about Markdown by viewing the aforementioned GitHub guide. To
+complete this aspect of the assignment, you should write one high-quality
+paragraph that reports on your experiences. Your \reflection{} should also
+contain answers to other questions, about \mainprogram{}, posed at the end of
+this assignment sheet.
 
-Since this is our first laboratory assignment and you are still learning how to use the appropriate hardware and
-software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
-about the necessary technology and the background and expertise of the other students in the class, the teaching
-assistants, and the course instructor.
+Since this is our first laboratory assignment and you are still learning how to
+use the appropriate hardware and software, don't become frustrated if you make a
+mistake. Instead, use your mistakes as an opportunity for learning both about
+the necessary technology and the background and expertise of the other students
+in the class, the teaching assistants, and the course instructor.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by the Checkstyle tool, the source code for the \mainprogram{} and \testprogram{} files must adhere to all of
-the requirements in the Google Java Style Guide available at \url{https://google.github.io/styleguide/javaguide.html}.
-The Markdown file that contains your reflection must adhere to the standards described in the Markdown Syntax Guide
-\url{https://guides.github.com/features/mastering-markdown/}. Finally, your \reflection{} file should adhere to the
-Markdown standards established by the \step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
-\url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, GatorGrader makes it easy for you to automatically check if your submission meets the
-standards for correctness. For instance, GatorGrader will run the provided JUnit tests, check to ensure that
-\mainprogram{} produces exactly twenty lines of output, and see that you commit to GitHub a sufficient number of times
-when completing this assignment.
+As verified by the Checkstyle tool, the source code for the \mainprogram{} and
+\testprogram{} files must adhere to all of the requirements in the Google Java
+Style Guide available at
+\url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
+contains your reflection must adhere to the standards described in the Markdown
+Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
+Finally, your \reflection{} file should adhere to the Markdown standards
+established by the \step{Markdown linting} tool available at
+\url{https://github.com/markdownlint/markdownlint/} and the writing standards
+set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
+of requiring you to manually check that your deliverables adhere to these
+industry-accepted standards, you will learn to use tools that make it easy for
+you to automatically check if your submission meets the standards for
+correctness. For instance, you have already seen that Gradle will run the
+provided JUnit tests and alert you if they do not pass.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please try to
-determine why, asking a teaching assistant or the course instructor for assistance, if necessary.
+You can also use the GatorGrader tool to ensure that \mainprogram{} produces
+exactly twenty lines of output and see that you committed to GitHub a sufficient
+number of times when completing this assignment. To get started with the use of
+GatorGrader, type the command \gatorgraderstart{} in your terminal window. If
+your laboratory work does not meet all of the assignment's requirements, then
+you will see a summary of the failing checks along with a statement giving the
+percentage of checks that are currently passing. If you do have mistakes in your
+assignment, then you will need to review GatorGrader's output, find the mistake,
+and try to fix it, consulting your text book and course notes as needed. Once
+your program is building correctly, fulfilling at least some of the assignment's
+requirements, you should transfer your files to GitHub using the \gitcommit{}
+and \gitpush{} commands. For example, if you want to signal that the
+\mainprogramsource{} file has been changed and is ready for transfer to GitHub
+you would first type \gitcommitmainprogram{} in your terminal, followed by
+typing \gitpush{} and checking to see that the transfer to GitHub is successful.
+If you notice that transferring your code or writing to GitHub did not work
+correctly, then please try to determine why, asking a teaching assistant or the
+course instructor for assistance, if necessary.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks, thereby
+allowing the course instructor to evaluate other aspects of your source code and
+writing, as further described in the \step{Evaluation} section of this
+assignment sheet. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment.
 
-Please note that if you are completing this laboratory assignment on your own laptop the GatorGrader program will only
-run correctly if you have installed all of the programs on which it depends. You can see these dependencies (i.e.,
-Gradle, Java, Markdownlint, Proselint, and Python) by reading the documentation in your GitHub repository for this
-assignment. Note that assignment checking will still work with Travis CI even if you do not have these programs
-installed on your laptop. Please see the instructor or teaching assistant if you have trouble installing these programs.
+Please note that if you are completing this laboratory assignment on your own
+laptop the GatorGrader program will only run correctly if you have installed all
+of the programs on which it depends. You can see these dependencies (i.e.,
+Gradle, Java, Markdownlint, Proselint, and Python) by reading the documentation
+in your GitHub repository for this assignment. Note that assignment checking
+will still work with Travis CI even if you do not have these programs installed
+on your laptop. Please see the instructor or teaching assistant if you have
+trouble installing these programs.
 
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables.
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables.
 
 \begin{enumerate}
 
   \setlength{\itemsep}{0in}
 
-\item Stored in a Markdown file called \reflection{}, a one-paragraph response, each consisting of at least three
-  sentences, for each of the following questions.
+\item Stored in a Markdown file called \reflection{}, a one-paragraph response,
+  each consisting of at least three sentences, for each of the following
+  questions.
+
+  \vspace*{-.1in}
 
   \begin{enumerate}
     \itemsep 0em
 
-    \item The {\tt CreditCard} constructor uses the {\tt this} keyword --- what does it mean?
+    \item The {\tt CreditCard} constructor uses the {\tt this} keyword --- what
+      does it mean?
 
-    \item The {\tt CreditCard} class contains a {\tt static} method --- how does it work?
+    \item The {\tt CreditCard} class contains a {\tt static} method --- how does
+      it work?
 
-    \item The {\tt CreditCard} class has a {\tt main} method --- what is the purpose of this method?
+    \item The {\tt CreditCard} class has a {\tt main} method --- what is the
+      purpose of this method?
 
-    \item How does the {\tt CreditCard} class use a {\tt for} loop and a {\tt while} loop?
+    \item How does the {\tt CreditCard} class use a {\tt for} loop and a {\tt
+      while} loop?
 
-    \item The {\tt CreditCard} class creates a {\tt wallet} --- what is it and how does it work?
+    \item The {\tt CreditCard} class creates a {\tt wallet} --- what is it and
+      how does it work?
 
   \end{enumerate}
 
-\item Stored in a Markdown file called \reflection{}, a one-paragraph (at least three sentence) reflection on the
-  challenges you faced and the steps that you took to solve them.
+\vspace*{-.1in}
+
+\item Stored in a Markdown file called \reflection{}, a one-paragraph (at least
+  three sentence) reflection on the challenges you faced and the steps that you
+  took to solve them.
 
 \item A properly documented, well-formatted, and correct version of \mainprogramsource{} that both meets all of the
   established requirements and produces the desired output.
