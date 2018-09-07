@@ -270,58 +270,85 @@ swapping program by typing \gradlerun{} in the terminal window---this is the
 Do you see that it produces correct output? If not, then please determine what
 is wrong and try to repair the program and re-build and re-run it.
 
+
+
 \section*{Checking the Correctness of Your Program and Writing}
 
 As verified by Checkstyle tool, the source code for the \mainprogram{} and
 \testprogram{} files must adhere to all of the requirements in the Google Java
 Style Guide available at
-\url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
-contains your reflection must adhere to the standards described in the Markdown
-Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
-Finally, your \reflection{} file should adhere to the Markdown standards
-established by the \step{Markdown linting} tool available at
+\url{https://google.github.io/styleguide/javaguide.html}. The Markdown file
+that contains your reflection must adhere to the standards described in the
+Markdown Syntax Guide
+\url{https://guides.github.com/features/mastering-markdown/}. Finally, your
+\reflection{} file should adhere to the Markdown standards established by the
+\step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/} and the writing standards
 set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
 of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, GatorGrader makes it easy for you to automatically
-check if your submission meets the standards for correctness. For instance,
-Gradle will run the provided JUnit tests, check to ensure that
-\mainprogram{} produces exactly six lines of output, and see that you committed
-to GitHub a sufficient number of times when completing this assignment.
+industry-accepted standards, Gradle and GatorGrader make it easy for you to
+automatically check if your submission meets the standards for correctness. For
+instance, Gradle will run the provided JUnit tests, check to ensure that
+\mainprogram{} produces exactly six lines of output, and GatorGrader will see
+if you committed to GitHub enough times when completing this practical
+assignment.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please try to
-determine why, asking a teaching assistant or the course instructor for assistance, if necessary.
+To get started with the use of GatorGrader, type the command
+\gatorgraderstart{} in your terminal window. If you have mistakes in your
+assignment, then you will need to review GatorGrader's output, find the
+mistake, and try to fix it. Once your program is building correctly, fulfilling
+at least some of the assignment's requirements, you should transfer your files
+to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you
+want to signal that the \mainprogramsource{} file has been changed and is ready
+for transfer to GitHub you would first type \gitcommitmainprogram{} in your
+terminal, followed by typing \gitpush{} to perform the transfer.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
-towards your grade for this practical assignment.
+\begin{figure}[t]
+  \centering
+  {\small
+  \begin{verbatim}
+    Values before the swap:
+      First value : 10
+      Second value: 20
+    Values after the swap:
+      First value : 20
+      Second value: 10
+  \end{verbatim}}
+  \vspace*{-.35in}
+  \caption{The Expected Output of the \mainprogram{} Program.}~\label{fig:output}
+  \vspace*{-.25in}
+\end{figure}
 
-Please note that if you are completing this practical assignment on your own laptop the GatorGrader program will only
-run correctly if you have installed all of the programs on which it depends. You can see these dependencies (i.e.,
-Gradle, Java, Markdownlint, Proselint, and Python) by reading the documentation in your GitHub repository for this
-assignment. Note that assignment checking will still work with Travis CI even if you do not have these programs
-installed on your laptop. Please see the instructor or teaching assistant if you have trouble installing these programs.
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of
+your assignment, checking to see if it meets all of the requirements. If both
+your source code and writing meet all of the established requirements, then you
+will see a green \checkmark{} in the listing of commits in GitHub after awhile.
+If your submission does not meet the requirements, a red \naughtmark{} will
+appear instead. The instructor will reduce a student's grade for this
+assignment if the red \naughtmark{} appears on the last commit in GitHub
+immediately before the assignment's due date. Yet, if the green \checkmark{}
+appears on the last commit in your GitHub repository, then you satisfied all of
+the main checks, thereby allowing the course instructor to evaluate other
+aspects of your source code and writing, as further described in the
+\step{Evaluation} section of this assignment sheet. Unless you provide the
+instructor with documentation of the extenuating circumstances that you are
+facing, no late work will be considered towards your grade for this practical
+assignment.
+
+Please note that if you are completing this practical assignment on your own
+laptop the GatorGrader program will only run correctly if you have installed
+all of the programs on which it depends. Note that assignment checking will
+still work with Travis CI even if you do not have these programs installed on
+your laptop. Please see a teaching assistant if you cannot install these
+programs.
 
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables.
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables.
 
 \begin{enumerate}
 
@@ -331,18 +358,27 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
   \mainprogramsource{} that meets the established requirements and produces the
   desired output.
 
+\item A properly documented, well-formatted, and correct version of
+  \testprogramsource{} that meets the established requirements and produces the
+  desired output.
+
 \end{enumerate}
 
 \section*{Evaluation of Your Practical Assignment}
 
-Using a report that the instructor shares with you through the commit log in GitHub, you will privately received a grade
-on this assignment and feedback on your submitted deliverables. Your grade for the assignment will be a function of the
-whether or not it was submitted in a timely fashion and if your program received a green \checkmark{} indicating that it
-met all of the requirements. Other factors will also influence your final grade on the assignment. In addition to
-studying the efficiency and effectiveness of your Java source code, the instructor will also evaluate the accuracy of
-both your technical writing and the comments in your source code. If your submission receives a red \naughtmark{}, the
-instructor will reduce your grade for the assignment while still considering the regularity with which you committed to
-your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
-questions about the evaluation of this laboratory assignment.
+Using a report that the instructor shares with you through the commit log in
+GitHub, you will privately received a grade on this assignment and feedback on
+your submitted deliverables. Your grade for the assignment will be a function
+of the whether or not it was submitted in a timely fashion and if your program
+received a green \checkmark{} indicating that it met all of the requirements.
+Other factors will also influence your final grade on the assignment. In
+addition to studying the efficiency and effectiveness of your Java source code,
+the instructor will also evaluate the accuracy of both your technical writing
+and the comments in your source code. If your submission receives a red
+\naughtmark{}, the instructor will reduce your grade for the assignment while
+still considering the regularity with which you committed to your GitHub
+repository and the overall quality of your partially completed work. Please see
+the instructor if you have questions about the evaluation of this practical
+assignment.
 
 \end{document}
