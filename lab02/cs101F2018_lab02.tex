@@ -338,21 +338,23 @@ should write one high-quality paragraph that reports on your experiences. Your
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by the Checkstyle tool, the source code for the \mainprogram{} and the
-other Java files must adhere to all of the requirements in the Google Java Style
-Guide available at \url{https://google.github.io/styleguide/javaguide.html}. The
-Markdown file that contains your reflection must adhere to the standards
-described in the Markdown Syntax Guide
+As verified by the Checkstyle tool, the source code for the \mainprogram{} and
+\testprogram{} files must adhere to all of the requirements in the Google Java
+Style Guide available at
+\url{https://google.github.io/styleguide/javaguide.html}. The Markdown file
+that contains your reflection must adhere to the standards described in the
+Markdown Syntax Guide
 \url{https://guides.github.com/features/mastering-markdown/}. Finally, your
 \reflection{} file should adhere to the Markdown standards established by the
 \step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint/}. Instead of requiring you to
-manually check that your deliverables adhere to these industry-accepted
-standards, GatorGrader makes it easy for you to automatically check if your
-submission meets the standards for correctness. For instance, GatorGrader will
-run the provided JUnit tests, check to ensure that \mainprogram{} produces
-twenty-six lines of output, and see that you commit to GitHub a sufficient
-number of times when completing this assignment.
+\url{https://github.com/markdownlint/markdownlint/} and the writing standards
+set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
+of requiring you to manually check that your deliverables adhere to these
+industry-accepted standards, you will use tools that make it easy for you to
+automatically check if your submission meets the standards for correctness. For
+instance, Gradle will run the provided tests and GatorGrader will check to
+ensure that \mainprogram{} produces twenty-six lines of output and that you
+commit to GitHub a sufficient number of times during this assignment.
 
 To get started with the use of GatorGrader, type the command
 \gatorgraderstart{} in your terminal window. Once this step completes you can
