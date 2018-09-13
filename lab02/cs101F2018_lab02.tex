@@ -215,9 +215,10 @@ Now, you should accept the assignment and see that GitHub Classroom created a
 new GitHub repository for you to access the assignment's starting materials and
 to store the completed version of your assignment. Specifically, to access your
 new GitHub repository for this assignment, please click the green ``Accept''
-button and then click the link that is prefaced with the label ``Your assignment
-has been created here''. If you accepted the assignment and correctly followed
-these steps, you should have created a GitHub repository with a name like
+button and then click the link that is prefaced with the label ``Your
+assignment has been created here''. If you accepted the assignment and
+correctly followed these steps, you should have created a GitHub repository
+with a name like
 ``Allegheny-Computer-Science-101-Fall-2018/computer-science-101-fall-2018-lab-2-gkapfham''.
 Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
@@ -240,28 +241,29 @@ like:
   git clone git@github.com:Allegheny-Computer-Science-101-F2018/computer-science-101-fall-2018-lab-2-gkapfham.git
 \end{lstlisting}
 
-After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
-one directory from your current location, then you can type the command \command{cd ..}. Please continue to use the
-\command{cd} and \command{ls} commands to explore the files that you automatically downloaded from GitHub. What files
-and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
-a neighbor and a \mbox{teaching assistant}.
+After this command finishes, you can use \command{cd} to change into the new
+directory. If you want to \step{go back} one directory from your current
+location, then you can type the command \command{cd ..}. Please continue to use
+the \command{cd} and \command{ls} commands to explore the files that you
+automatically downloaded from GitHub. What files and directories do you see?
+What do you think is their purpose? Spend some time exploring, sharing your
+discoveries with a neighbor and a \mbox{teaching assistant}.
 
 \section*{Implementing and Testing a Sentences Reversing Program}
 
 In order view the source code of a Java program or a Markdown-based writing
 assignment, you need a text editor. There are many different text editors on
 your workstation and you should feel free to explore these on your own. For
-instance, you may adopt either the GVim or the Atom text editor to complete this
-laboratory assignment. Please study the source code of the \mainprogramhelper
-class, noticing that some of its methods are incomplete. Now, can you draw a
-picture showing how these classes (i.e., both test suites and supporting
-entities) are related? For instance, you should notice that the
+instance, you may adopt either the GVim or the Atom text editor to complete
+this laboratory assignment. Please study the source code of the
+\mainprogramhelper~class, noticing that some of its methods are incomplete.
+Now, can you draw a picture showing how these classes (i.e., both test suites
+and supporting entities) are related? For instance, you should notice that the
 \mainprogramhelper{} has a test suite called \testprogram{} that is written in
 the JUnit testing framework; please refer to Section 1.9 and the comments in
-the source code of this test suite to learn more about how it works.
-Intuitively, a Junit test suite has individual test cases, written as Java
-methods, that each work to establish a confidence in the correctness of
-\mainprogram{}.
+the source code of this test suite to learn more about how it works. Remember,
+a JUnit test suite has individual test cases, written as Java methods, that
+each work to establish a confidence in the correctness of \mainprogram{}.
 
 Your program should ultimately produce the output that is given in
 Figure~\ref{fig:output}. However, you will note that the current implementation
@@ -363,17 +365,23 @@ the \mainprogramsource{} file has been changed and is ready for transfer to GitH
 is successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please try to
 determine why, asking a teaching assistant or the course instructor for assistance, if necessary.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
-towards your grade for this laboratory assignment.
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of
+your assignment, checking to see if it meets all of the requirements. If both
+your source code and writing meet all of the established requirements, then you
+will see a green \checkmark{} in the listing of commits in GitHub after awhile.
+If your submission does not meet the requirements, a red \naughtmark{} will
+appear instead. The instructor will reduce a student's grade for this
+assignment if the red \naughtmark{} appears on the last commit in GitHub
+immediately before the assignment's due date. Yet, if the green \checkmark{}
+appears on the last commit in your GitHub repository, then you satisfied all of
+the main checks, thereby allowing the course instructor to evaluate other
+aspects of your source code and writing, as further described in the
+\step{Evaluation} section of this assignment sheet. Unless you provide the
+instructor with documentation of the extenuating circumstances that you are
+facing, no late work will be considered towards your grade for this laboratory
+assignment.
 
 Please note that if you are completing this laboratory assignment on your own laptop the GatorGrader program will only
 run correctly if you have installed all of the programs on which it depends. You can see these dependencies (i.e.,
