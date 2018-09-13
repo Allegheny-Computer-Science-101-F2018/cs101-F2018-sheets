@@ -35,8 +35,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running and testing program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -357,21 +357,22 @@ ensure that \mainprogram{} produces twenty-six lines of output and that you
 commit to GitHub a sufficient number of times during this assignment.
 
 To get started with the use of GatorGrader, type the command
-\gatorgraderstart{} in your terminal window. Once this step completes you can
-type \gatorgradercheck{}. If your work does not meet all of the assignment's
-requirements, then you will see the following output in your terminal:
-\command{Overall, are there any mistakes in the assignment? Yes}. If you do
-have mistakes in your assignment, then you will need to review GatorGrader's
-output, find the mistake, and try to fix it. Once your program is building
-correctly, fulfilling at least some of the assignment's requirements, you
-should transfer your files to GitHub using the \gitcommit{} and \gitpush{}
+\gatorgraderstart{} in your terminal window. If your laboratory work does not
+meet all of the assignment's requirements, then you will see a summary of the
+failing checks along with a statement giving the percentage of checks that are
+currently passing. If you do have mistakes in your assignment, then you will
+need to review GatorGrader's output, find the mistake, and try to fix it,
+consulting your text book and course notes as needed. Once your program is
+building correctly, fulfilling at least some of the assignment's requirements,
+you should transfer your files to GitHub using the \gitcommit{} and \gitpush{}
 commands. For example, if you want to signal that the \mainprogramsource{} file
 has been changed and is ready for transfer to GitHub you would first type
 \gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and
-checking to see that the transfer to GitHub is successful. If you notice that
-transferring your code or writing to GitHub did not work correctly, then please
-try to determine why, asking a teaching assistant or the course instructor for
-assistance, if necessary.
+checking to see that the transfer to GitHub is successful.
+
+% If you notice that transferring your code or writing to GitHub did not work
+% correctly, then please try to determine why, asking a teaching assistant or the
+% instructor for assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
@@ -411,13 +412,13 @@ to submit, using GitHub, the following deliverables.
   \setlength{\itemsep}{0in}
 
 \item Stored in a Markdown file called \reflection{}, a one-paragraph response,
-  each consisting of at least three sentences, for each of the stated questions.
+  each consisting of at least 100 words, for each of the stated questions.
 
 \item A properly documented, well-formatted, and correct version of
   \mainprogramsource{} that both meets all of the established requirements and
   produces the desired output.
 
-\item A properly documented, well-formatted, and correct version all of the
+\item A properly documented, well-formatted, and correct version of all of the
   additional Java files needed to complete this assignment (e.g.,
   \mainprogramhelpersource).
 
