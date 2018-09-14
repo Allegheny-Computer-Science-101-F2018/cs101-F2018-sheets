@@ -4,8 +4,8 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{February 12}
-\newcommand{\assignmentassignedate}{February 9}
+\newcommand{\assignmentduedate}{September 17}
+\newcommand{\assignmentassignedate}{September 14}
 \newcommand{\assignmentnumber}{Two}
 
 \newcommand{\labyear}{2018}
@@ -33,8 +33,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running and testing program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -84,7 +84,7 @@ descriptive commit message"}}
 \pagestyle{fancy}
 
 \fancyhf{}
-\rhead{Computer Science 112}
+\rhead{Computer Science 101}
 \lhead{Practical Assignment \assignmentnumber{}}
 \rfoot{Page \thepage}
 \lfoot{\duedate}
@@ -97,8 +97,8 @@ descriptive commit message"}}
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 112\\Introduction to Computer Science II\\
-      Spring 2018\\
+      CMPSC 101\\Data Abstraction\\
+      Fall 2018\\
       \medskip
     \end{center}
     \bf
@@ -185,8 +185,8 @@ that you have read guides such as ``Mastering Markdown'' and ``Documenting Your
 Projects on GitHub''; each of them will help you to understand how to use both
 GitHub and GitHub Classroom. To do well on this assignment, you should also
 read Chapters 1 through 3 in the textbook, paying particularly close attention
-to Sections 1.3 through 1.5 and Section 3.1. Please see the instructor or a
-teaching assistant if you have questions on these sections.
+to Sections 1.3 through 1.9. Please see the instructor or a teaching assistant
+if you have questions on these sections.
 
 \section*{Accessing the Practical Assignment on GitHub}
 
@@ -201,7 +201,7 @@ button and then click the link that is prefaced with the label ``Your
 assignment has been created here''. If you accepted the assignment and
 correctly followed these steps, you should have created a GitHub repository
 with a name like
-``Allegheny-Computer-Science-112-Spring-2018/computer-science-112-spring-2018-practical-2-gkapfham''.
+``Allegheny-Computer-Science-101-Fall-2018/computer-science-101-fall-2018-practical-2-gkapfham''.
 Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting this practical assignment
 means that you automatically receive a failing grade for it.
@@ -213,14 +213,14 @@ and the output that your program must produce. Now you are ready to download the
 starting materials to your laboratory computer. Click the ``Clone or download''
 button and, after ensuring that you have selected ``Clone with SSH'', please
 copy this command to your clipboard. At this point, you can open a new terminal
-window and type the command \command{cd cs112S2018} to enter the course
+window and type the command \command{cd cs101S2018} to enter the course
 directory. Now type \command{git clone} in your terminal and paste in the string
 that you copied from the GitHub site to download this assignment's code. For
 instance, if the instructor ran the \command{git clone} command, it would look
 like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-112-S2018/computer-science-112-spring-2018-practical-2-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-practical-2-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -245,23 +245,23 @@ then square the result. You will need to ensure that the result from each
 iteration carries over to the next one. Then, you will perform a division and
 return this value.
 
-You should run the test suite called \testprogram{} that is written in the JUnit
-testing framework. Please read each of the tests as they explain, in Java source
-code, the expected properties of the methods for calculating summary statistics.
-If you want to \step{build} your program you can type the command \gradlebuild{}
-in your terminal, thereby causing the Java compiler to check your program for
-errors and get it ready to run. If you see any error messages, go back to your
-text editor and figure out what you mis-typed and fix it. Oncer you have solved
-the problem, make a note of the error and the solution for resolving it. Re-save
-your program and then build it again by re-running the \gradlebuild{}. If you
-cannot build \mainprogram{} correctly, then please talk with a teaching
-assistant or the instructor. You can also run the test suite for the
-\mainprogram{} by typing \gradletest{} in the terminal. What is the purpose of
-each of these test cases? How do they check the output of the methods that
-calculate summary statistics? You should keep revising your implementation of
-\command{calculateVariance} until all tests pass.
+You should run the test suite called \testprogram{} that is written in the
+JUnit testing framework. Please read each of the tests as they explain, in Java
+source code, the expected properties of the methods for calculating summary
+statistics. If you want to \step{build} your program you can type the command
+\gradlebuild{} in your terminal, thereby causing the Java compiler to check
+your program for errors and get it ready to run. If you see any error messages,
+go back to your text editor and figure out what you mis-typed and fix it. Once
+you have solved the problem, make a note of the error and the solution for
+resolving it. Re-save your program and then build it again by re-running the
+\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
+with a teaching assistant or the instructor. You can also run the test suite
+for the \mainprogram{} by typing \gradletest{} in the terminal. What is the
+purpose of each of these test cases? How do they check the output of the
+methods that calculate summary statistics? You should keep revising your
+implementation of \command{calculateVariance} until all of the tests pass.
 
-Once you resolve all of the building and testing errors, you can run your
+After you resolve all of the building and testing errors, you can run your
 program by typing \gradlerun{} in the terminal window---this is the ``execute''
 step that will run your program and produce the designated output. Do you see
 that it produces the correct output with the expected numerical values? For
