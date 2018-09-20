@@ -261,17 +261,27 @@ Figure~\ref{fig:output}.
 
 If you want to \step{build} your program you can type the command \gradlebuild{}
 in your terminal, thereby causing the Java compiler to check your program for
-errors and get it ready to run. If you get any error messages, go back to your
-text editor and figure out what you mis-typed and fix it. Once you have solved
-the problem, make a note of the error and the solution for resolving it. Re-save
-your program and then build it again by re-running the \gradlebuild{}. If you
-cannot build \mainprogram{} correctly, then please talk with the course
-instructor. You can also run the test suite for the classes in \mainprogram{} by
-typing \gradletest{} in the terminal. Again, please make sure that you
-understand the purpose of each of these test cases and that you at least add the
-missing test case. Of course, think about other tests you could also add! You
-should incrementally complete this assignment, making small changes and
-regularly committing your source code and writing.
+errors and get it ready to run. Please note that when you first try to build the
+program you will see the following message in your terminal window. What is the
+meaning of this message? What does it tell you about the program?
+
+\vspace*{-.05in}
+\begin{verbatim}
+Exception in thread "main" java.lang.NullPointerException
+        at labthree.Reverser.main(Reverser.java:46)
+\end{verbatim}
+\vspace*{-.05in}
+
+Please note that once you implement the required methods correctly, the program
+will not produce this error message when executed. If you get any further error
+messages, go back to your text editor and figure out what you mis-typed and fix
+it. Once you have solved the problem, make a note of the error and the solution
+for resolving it. If you cannot build \mainprogram{} correctly, then please talk
+with the course instructor. Remember, you can run the tests for the classes in
+\mainprogram{} by typing \gradletest{} in the terminal. Again, please make sure
+that you understand the purpose of each of these test cases and that you
+consider adding the more test cases. You should incrementally complete this
+assignment, making small changes and regularly committing your code and writing.
 
 Once you resolve all of the building and testing errors, you can run your
 program by typing \gradlerun{} in the terminal window---this is the ``execute''
