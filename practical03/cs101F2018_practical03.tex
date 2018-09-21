@@ -264,21 +264,31 @@ do not pass? Can you identify any common reason why the tests might fail? Please
 study the source code of \testprogramsource{} to see if you can find and fix any
 implementation mistakes in the test suite. Now how many test cases are passing?
 
-At this point, you should notice that many of the tests are still failing. This
-means that you will have to examine the source code of \mainprogram{} to
-determine what mistakes are lurking in its implementation. Please note that the
-two sorting methods contains several (different) mistakes that you should
-incrementally fix. Reading about \mainprogram{} on Wikipedia and reasoning about
-how the current implementation does not match the algorithm's expected behavior
-should help you to find and repair the defects. Remember, if you want to
-\step{build} your program you can type the command \gradlebuild{} in your
-terminal, thereby causing the Java compiler to check your program for errors and
-get it ready to run. If you see any error messages, go back to your text editor
-and figure out what you mis-typed and fix it. Once you have solved the problem,
-make a note of the error and the solution for resolving it. Re-save your program
-and then build it again by re-running the \gradlebuild{}. You should keep
-revising the implementation of \mainprogram's methods until all of the tests
-pass. Then, you can use \gradlerun{} to see the program's output.
+At this point, you should notice that many of the tests are still failing and,
+when run, the program crashes after throwing a
+\program{java.lang.ArrayIndexOutOfBoundsException}. This means that you will
+have to examine the source code of \mainprogram{} to determine what mistakes are
+lurking in its implementation. Please note that the two sorting methods contains
+several (different) mistakes that you should incrementally fix. Reading about
+\mainprogram{} on Wikipedia and reasoning about how the current implementation
+does not match the algorithm's expected behavior should help you to find and
+repair the defects. Remember, if you want to \step{build} your program you can
+type the command \gradlebuild{} in your terminal, thereby causing the Java
+compiler to check your program for errors and get it ready to run. If you see
+any error messages, go back to your text editor and figure out what you
+mis-typed and fix it. Once you have solved the problem, make a note of the error
+and the solution for resolving it. Re-save your program and then build it again
+by re-running the \gradlebuild{}. You should keep revising the implementation of
+\mainprogram's methods until all of the tests pass. Then, you can use
+\gradlerun{} to see the program's output. If your sorting algorithm works
+correctly you should see the following output in the terminal:
+
+\begin{verbatim}
+  Before: [C, E, B, D, A, I, J, L, K, H, G, F]
+  After : [A, B, C, D, E, F, G, H, I, J, K, L]
+  Before: [1, 2, 4, 4, 9, 10, -10, 3, 8, 7, 20, 0]
+  After : [-10, 0, 1, 2, 3, 4, 4, 7, 8, 9, 10, 20]
+\end{verbatim}
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -286,11 +296,11 @@ As verified by Checkstyle tool, the source code for \mainprogram{} and its test
 suite must adhere to all of the requirements in the Google Java Style Guide
 available at \url{https://google.github.io/styleguide/javaguide.html}. Instead
 of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, GatorGrader makes it easy for you to automatically
+industry-accepted standards, tools will make it easy for you to automatically
 check if your submission meets the standards for correctness. For instance,
-GatorGrader will run the provided tests, check to ensure that \mainprogram{}
-produces exactly four lines of output, and see that you committed to GitHub a
-sufficient number of times when completing this assignment.
+Gradle will run the provided tests, while GatorGrader will check to ensure that
+\mainprogram{} produces exactly four lines of output and that you committed to
+GitHub a sufficient number of times when completing this assignment.
 
 To get started with the use of GatorGrader, type the command
 \gatorgraderstart{} in your terminal window. If you have mistakes in your
