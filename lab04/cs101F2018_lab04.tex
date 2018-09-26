@@ -193,15 +193,16 @@ if you have questions about this reading assignment.
 \section*{Accessing the Laboratory Assignment on GitHub}
 
 To access the laboratory assignment, you should go into the
-\channel{\#announcements} channel in our Slack team and find the announcement
-that provides a link for it. Copy this link and paste it into a web browser.
-Now, you should accept the assignment and see that GitHub Classroom created a
-new GitHub repository for you to access the assignment's starting materials and
-to store the completed version of your assignment. Specifically, to access your
-new GitHub repository for this assignment, please click the green ``Accept''
-button and then click the link that is prefaced with the label ``Your assignment
-has been created here''. If you accepted the assignment and correctly followed
-these steps, you should have created a GitHub repository with a name like
+\channel{\#announcements} channel in our Slack workspace and find the
+announcement that provides a link for it. Copy this link and paste it into a
+web browser. Now, you should accept the assignment and see that GitHub
+Classroom created a new GitHub repository for you to access the assignment's
+starting materials and to store the completed version of your assignment.
+Specifically, to access your new GitHub repository for this assignment, please
+click the green ``Accept'' button and then click the link that is prefaced with
+the label ``Your assignment has been created here''. If you accepted the
+assignment and correctly followed these steps, you should have created a GitHub
+repository with a name like
 ``Allegheny-Computer-Science-101-Fall-2018/computer-science-101-fall-2018-lab-4-gkapfham''.
 Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
@@ -259,10 +260,10 @@ documentation to learn more about how this method works. You should also note
 that, at the outset, these sorting methods return the \program{source}
 variable---once you have implemented the sorting method for both data types you
 should change this to instead return the variable called \program{sorted}. As
-you complete this laboratory assignment, you goal is to proceed incrementally,
+you complete this laboratory assignment, your goal is to proceed incrementally,
 adding the required code and then checking to see if an additional test passes.
-Once a new feature is working, please make sure that you commit your code with a
-descriptive message.
+Once a new feature is working, please make sure that you commit your code with
+a descriptive message.
 
 Once the program runs and the tests pass, please reflect on this process. What
 step did you find to be the most challenging? Why? You should write your
@@ -288,44 +289,86 @@ implementation and testing.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
+% As verified by the Checkstyle tool, the source code for the \mainprogram{} and
+% the other Java files must adhere to all of the requirements in the Google Java
+% Style Guide available at
+% \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
+% contains your reflection must adhere to the standards described in the Markdown
+% Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
+% Finally, your \reflection{} file should adhere to the Markdown standards
+% established by the \step{Markdown linting} tool available at
+% \url{https://github.com/markdownlint/markdownlint/}. Instead of requiring you to
+% manually check that your deliverables adhere to these industry-accepted
+% standards, GatorGrader makes it easy for you to automatically check if your
+% submission meets the standards for correctness. For instance, GatorGrader will
+% run the provided JUnit tests, check to ensure that \mainprogram{} produces
+% \mainprogramoutput{} lines of output, and see that you commit to GitHub a
+% sufficient number of times when completing this assignment.
+
 As verified by the Checkstyle tool, the source code for the \mainprogram{} and
 the other Java files must adhere to all of the requirements in the Google Java
 Style Guide available at
 \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
 contains your reflection must adhere to the standards described in the Markdown
-Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
+Syntax Guide at \url{https://guides.github.com/features/mastering-markdown/}.
 Finally, your \reflection{} file should adhere to the Markdown standards
 established by the \step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/}. Instead of requiring you to
 manually check that your deliverables adhere to these industry-accepted
 standards, GatorGrader makes it easy for you to automatically check if your
-submission meets the standards for correctness. For instance, GatorGrader will
-run the provided JUnit tests, check to ensure that \mainprogram{} produces
+submission meets the standards for correctness. For instance, automated tools
+will run the provided JUnit tests, check to ensure that \mainprogram{} produces
 \mainprogramoutput{} lines of output, and see that you commit to GitHub a
 sufficient number of times when completing this assignment.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please try to
-determine why, asking a teaching assistant or the course instructor for assistance, if necessary.
+To get started with the use of GatorGrader, type the command
+\gatorgraderstart{} in your terminal window. If your laboratory work does not
+meet all of the assignment's requirements, then you will see a summary of the
+failing checks along with a statement giving the percentage of checks that are
+currently passing. If you do have mistakes in your assignment, then you will
+need to review GatorGrader's output, find the mistake, and try to fix it,
+consulting your text book and course notes as needed. Once your program is
+building correctly, fulfilling at least some of the assignment's requirements,
+you should transfer your files to GitHub using the \gitcommit{} and \gitpush{}
+commands. For example, if you want to signal that the \mainprogramsource{} file
+has been changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and
+checking to see that the transfer to GitHub is successful.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
-towards your grade for this laboratory assignment.
+% To get started with the use of GatorGrader, type the command
+% \gatorgraderstart{} in your terminal window. Once this step completes you can
+% type \gatorgradercheck{}. If your work does not meet all of the assignment's
+% requirements, then you will see the following output in your terminal:
+% \command{Overall, are there any mistakes in the assignment? Yes}. If you do
+% have mistakes in your assignment, then you will need to review GatorGrader's
+% output, find the mistake, and try to fix it. Once your program is building
+% correctly, fulfilling at least some of the assignment's requirements, you
+% should transfer your files to GitHub using the \gitcommit{} and \gitpush{}
+% commands. For example, if you want to signal that the \mainprogramsource{}
+% file has been changed and is ready for transfer to GitHub you would first
+% type \gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}
+% and checking to see that the transfer to GitHub is successful. If you notice
+% that transferring your code or writing to GitHub did not work correctly, then
+% please try to determine why, asking a teaching assistant or the course
+% instructor for assistance, if necessary.
+
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of
+your assignment, checking to see if it meets all of the requirements. If both
+your source code and writing meet all of the established requirements, then you
+will see a green \checkmark{} in the listing of commits in GitHub after awhile.
+If your submission does not meet the requirements, a red \naughtmark{} will
+appear instead. The instructor will reduce a student's grade for this
+assignment if the red \naughtmark{} appears on the last commit in GitHub
+immediately before the assignment's due date. Yet, if the green \checkmark{}
+appears on the last commit in your GitHub repository, then you satisfied all of
+the main checks, thereby allowing the course instructor to evaluate other
+aspects of your source code and writing, as further described in the
+\step{Evaluation} section of this assignment sheet. Unless you provide the
+instructor with documentation of the extenuating circumstances that you are
+facing, no late work will be considered towards your grade for this laboratory
+assignment.
 
 \section*{Summary of the Required Deliverables}
 
