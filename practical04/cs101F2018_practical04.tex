@@ -202,8 +202,8 @@ you have read guides such as ``Mastering Markdown'' and ``Documenting Your
 Projects on GitHub''; each of them will help you to understand how to use
 GitHub. To do well on this assignment, you should study the Wikipedia article
 about CaesarCipher, review Section 3.1 in the textbook, with a focus on the
-cryptography content in your textbook. Please see the course instructor with
-questions about these reading assignments.
+cryptography source code in Code Fragment 3.8. Please see the course instructor
+with questions about these reading assignments.
 
 \section*{Accessing the Practical Assignment on GitHub}
 
@@ -248,22 +248,22 @@ automatically downloaded from GitHub. What files and directories do you see?
 What do you think is their purpose? Spend some time exploring, sharing your
 discoveries with a neighbor and a \mbox{teaching assistant}.
 
-\section*{Implementing a Java Program that Performs Encryption}
+\section*{Implementing a Java Program that Performs Cryptography}
 
-Please study the source code of the \mainprogram{} class. Can you see any
-obvious ways in which the implementation of this sorting algorithm is incorrect?
-You should run the test suite called \testprogram{} that is written in the JUnit
-testing framework. Please read each of the tests as they explain, in Java source
-code, the expected behavior of a sorting algorithm. You should pay particularly
-close attention to the fact that the test cases use the array-based sorting
-algorithm that is provided by the Java programming language to support the
-testing of \mainprogram{}. Why is this a good approach to testing a new sorting
-algorithm? You can run the test suite for the \mainprogram{} class by typing
-\gradletest{} in the terminal. Did you notice that many of the test cases do not
-pass? Can you identify any common reason why the tests might fail? Please study
-the source code of \testprogramsource{} to see if you can find and fix any
-implementation mistakes in the test suite. Now how many test cases are passing?
+Please study the source code of the \mainprogram{} class. You will notice that
+the constructor for it, as given below this paragraph, accepts a
+\program{rotation} parameter and the executes an iteration construct. What is
+the purpose of this loop and how does it use the \program{\%} operator?
+Additionally, you should run the test suite called \testprogram{} that is
+written in the JUnit testing framework. Please read each of the tests as they
+explain, in Java source code, the expected behavior of cryptography algorithm.
+You can run the test suite for the \mainprogram{} class by typing \gradletest{}
+in the terminal. Did you see that one of the test cases does not pass? Can you
+explain why the test might fail? You should also study the code of
+\testprogramsource{} and notice that two of the tests have not been implemented.
+Can you add the needed code?
 
+\vspace*{-.125in}
 \begin{verbatim}
   public CaesarCipher(int rotation) {
     for (int k = 0; k < 26; k++) {
@@ -272,32 +272,28 @@ implementation mistakes in the test suite. Now how many test cases are passing?
     }
   }
 \end{verbatim}
+\vspace*{-.125in}
 
-At this point, you should notice that many of the tests are still failing and,
-when run, the program crashes after throwing a
-\program{java.lang.ArrayIndexOutOfBoundsException}. This means that you will
-have to examine the source code of \mainprogram{} to determine what mistakes are
-lurking in its implementation. Please note that the two sorting methods contains
-several (different) mistakes that you should incrementally fix. Reading about
-\mainprogram{} on Wikipedia and reasoning about how the current implementation
-does not match the algorithm's expected behavior should help you to find and
-repair the defects. Remember, if you want to \step{build} your program you can
-type the command \gradlebuild{} in your terminal, thereby causing the Java
-compiler to check your program for errors and get it ready to run. If you see
-any error messages, go back to your text editor and figure out what you
-mis-typed and fix it. Once you have solved the problem, make a note of the error
-and the solution for resolving it. Re-save your program and then build it again
-by re-running the \gradlebuild{}. You should keep revising the implementation of
+You should input the source code from Code Fragment 3.8 into the provided
+framework, following the \program{TODO} markers and adhering to the Google style
+guide for Java programming. Remember, if you want to \step{build} your program
+you can type the command \gradlebuild{} in your terminal, thereby causing the
+Java compiler to check your program for errors and get it ready to run. If you
+see any error messages, go back to your text editor and figure out what you
+mis-typed and fix it. You should keep revising the implementation of
 \mainprogram's methods until all of the tests pass. Then, you can use
-\gradlerun{} to see the program's output. If your sorting algorithm works
-correctly you should see the following output in the terminal:
+\gradlerun{} to see the program's output. If your cryptography algorithms work
+correctly you should see the following output in the terminal. How does this
+show ways in which to improve the algorithms?
 
+\vspace*{-.125in}
 \begin{verbatim}
   Encryption code = DEFGHIJKLMNOPQRSTUVWXYZABC
   Decryption code = XYZABCDEFGHIJKLMNOPQRSTUVW
   Secret:  WKH HDJOH LV LQ SODB; PHHW DW MRH'V DW 2:00 SP.
   Message: THE EAGLE IS IN PLAY; MEET AT JOE'S AT 2:00 PM.
 \end{verbatim}
+\vspace*{-.125in}
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -309,17 +305,16 @@ industry-accepted standards, tools will make it easy for you to automatically
 check if your submission meets the standards for correctness. For instance,
 Gradle will run the provided tests, while GatorGrader will check to ensure that
 \mainprogram{} produces exactly four lines of output and that you committed to
-GitHub a sufficient number of times when completing this assignment.
-
-To get started with the use of GatorGrader, type the command
-\gatorgraderstart{} in your terminal window. If you have mistakes in your
-assignment, then you will need to review GatorGrader's output, find the
-mistake, and try to fix it. Once your program is building correctly, fulfilling
-at least some of the assignment's requirements, you should transfer your files
-to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you
-want to signal that the \mainprogramsource{} file has been changed and is ready
-for transfer to GitHub you would first type \gitcommitmainprogram{} in your
-terminal, followed by typing \gitpush{}.
+GitHub a sufficient number of times when completing this assignment. To get
+started with the use of GatorGrader, type the command \gatorgraderstart{} in
+your terminal window. If you have mistakes in your assignment, then you will
+need to review GatorGrader's output, find the mistake, and try to fix it. Once
+your program is building correctly, fulfilling at least some of the assignment's
+requirements, you should transfer your files to GitHub using the \gitcommit{}
+and \gitpush{} commands. For example, if you want to signal that the
+\mainprogramsource{} file has been changed and is ready for transfer to GitHub
+you would first type \gitcommitmainprogram{} in your terminal, followed by
+typing \gitpush{}.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
