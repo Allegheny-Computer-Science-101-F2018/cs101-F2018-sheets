@@ -119,9 +119,9 @@ assignment. Additionally, to review how to use the Ubuntu operating system and
 software development programs such as a ``terminal window'' and the ``text
 editor''. You will also continue to practice using Slack to support
 communication with the teaching assistants and the instructor. Next, you will
-learn how to use a test suite to guide the repair of a Java program that
-incorrectly uses nested iteration constructs to sort arrays, also practicing how
-to use an automated grading tool to assess your progress.
+learn how to use a test suite to guide the creation of a Java program that
+adheres to Google's style guide for programming in Java, also practicing how to
+use an automated grading tool to assess your progress.
 
 \section*{Suggestions for Success}
 
@@ -201,9 +201,9 @@ many of the features that GitHub provides. In particular, please make sure that
 you have read guides such as ``Mastering Markdown'' and ``Documenting Your
 Projects on GitHub''; each of them will help you to understand how to use
 GitHub. To do well on this assignment, you should study the Wikipedia article
-about CaesarCipher, preview Section 3.1 in the textbook, and review the sorting
-content in the textbook for your previous course. Please see the course
-instructor with questions about these reading assignments.
+about CaesarCipher, review Section 3.1 in the textbook, with a focus on the
+cryptography content in your textbook. Please see the course instructor with
+questions about these reading assignments.
 
 \section*{Accessing the Practical Assignment on GitHub}
 
@@ -248,7 +248,7 @@ automatically downloaded from GitHub. What files and directories do you see?
 What do you think is their purpose? Spend some time exploring, sharing your
 discoveries with a neighbor and a \mbox{teaching assistant}.
 
-\section*{Repairing a Java Program that Sorts Arrays}
+\section*{Implementing a Java Program that Performs Encryption}
 
 Please study the source code of the \mainprogram{} class. Can you see any
 obvious ways in which the implementation of this sorting algorithm is incorrect?
@@ -263,6 +263,15 @@ algorithm? You can run the test suite for the \mainprogram{} class by typing
 pass? Can you identify any common reason why the tests might fail? Please study
 the source code of \testprogramsource{} to see if you can find and fix any
 implementation mistakes in the test suite. Now how many test cases are passing?
+
+\begin{verbatim}
+  public CaesarCipher(int rotation) {
+    for (int k = 0; k < 26; k++) {
+      encoder[k] = (char) ('A' + (k + rotation) % 26);
+      decoder[k] = (char) ('A' + (k - rotation + 26) % 26);
+    }
+  }
+\end{verbatim}
 
 At this point, you should notice that many of the tests are still failing and,
 when run, the program crashes after throwing a
@@ -284,10 +293,10 @@ by re-running the \gradlebuild{}. You should keep revising the implementation of
 correctly you should see the following output in the terminal:
 
 \begin{verbatim}
-  Before: [C, E, B, D, A, I, J, L, K, H, G, F]
-  After : [A, B, C, D, E, F, G, H, I, J, K, L]
-  Before: [1, 2, 4, 4, 9, 10, -10, 3, 8, 7, 20, 0]
-  After : [-10, 0, 1, 2, 3, 4, 4, 7, 8, 9, 10, 20]
+  Encryption code = DEFGHIJKLMNOPQRSTUVWXYZABC
+  Decryption code = XYZABCDEFGHIJKLMNOPQRSTUVW
+  Secret:  WKH HDJOH LV LQ SODB; PHHW DW MRH'V DW 2:00 SP.
+  Message: THE EAGLE IS IN PLAY; MEET AT JOE'S AT 2:00 PM.
 \end{verbatim}
 
 \section*{Checking the Correctness of Your Program and Writing}
