@@ -4,14 +4,14 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{February 26}
-\newcommand{\assignmentassignedate}{February 23}
-\newcommand{\assignmentnumber}{Four}
+\newcommand{\assignmentduedate}{October 15}
+\newcommand{\assignmentassignedate}{October 12}
+\newcommand{\assignmentnumber}{Five}
 
 \newcommand{\labyear}{2018}
 \newcommand{\labdueday}{Monday}
 \newcommand{\labassignday}{Friday}
-\newcommand{\labtime}{1:30 pm}
+\newcommand{\labtime}{9:00 am}
 
 \newcommand{\assigneddate}{Assigned: \labassignday, \assignmentassignedate, \labyear{} at \labtime{}}
 \newcommand{\duedate}{Due: \labdueday, \assignmentduedate, \labyear{} at \labtime{}}
@@ -19,7 +19,7 @@
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{Experiment}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/labfive/experiment/Experiment.java}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalfive/experiment/Experiment.java}}
 
 % Edit these commands to give the main program's output details
 
@@ -28,7 +28,7 @@
 % Edit these commands to give the name to the test suite
 
 \newcommand{\testprogram}{\lstinline{TestExperiment}}
-\newcommand{\testprogramsource}{\lstinline{src/test/java/labfive/TestExperiment.java}}
+\newcommand{\testprogramsource}{\lstinline{src/test/java/practicalfive/TestExperiment.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -37,8 +37,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running and testing program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -57,7 +57,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/labfive/experiment/Experiment.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalfive/experiment/Experiment.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -88,7 +88,7 @@ descriptive commit message"}}
 \pagestyle{fancy}
 
 \fancyhf{}
-\rhead{Computer Science 112}
+\rhead{Computer Science 101}
 \lhead{Practical Assignment \assignmentnumber{}}
 \rfoot{Page \thepage}
 \lfoot{\duedate}
@@ -101,8 +101,8 @@ descriptive commit message"}}
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 112\\Introduction to Computer Science II\\
-      Spring 2018\\
+      CMPSC 101\\Data Abstraction\\
+      Fall 2018\\
       \medskip
     \end{center}
     \bf
@@ -207,7 +207,7 @@ new GitHub repository for this assignment, please click the green ``Accept''
 button and then click the link that is prefaced with the label ``Your assignment
 has been created here''. If you accepted the assignment and correctly followed
 these steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-112-Spring-2018/computer-science-112-spring-2018-practical-4-gkapfham''.
+``Allegheny-Computer-Science-101-Fall-2018/computer-science-101-fall-2018-practical-4-gkapfham''.
 Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it.
@@ -219,14 +219,14 @@ and the output that your program must produce. Now you are ready to download the
 starting materials to your laboratory computer. Click the ``Clone or download''
 button and, after ensuring that you have selected ``Clone with SSH'', please
 copy this command to your clipboard. To enter into your course directory you
-should now type \command{cd cs112S2018}. By typing \command{git clone} in your
+should now type \command{cd cs101F2018}. By typing \command{git clone} in your
 terminal and then pasting in the string that you copied from the GitHub site you
 will download all of the code for this assignment. For instance, if the course
 instructor ran the \command{git clone} command in the terminal, it would look
 like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-112-S2018/computer-science-112-spring-2018-practical-4-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-101-F2018/computer-science-101-fall-2018-practical-5-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -307,29 +307,26 @@ Figure~\ref{fig:output}.
   \vspace*{-.25in}
 \end{figure}
 
-\section*{Checking the Correctness of Your Program and Writing}
+\section*{Checking the Correctness of Your Program}
 
-As verified by the Checkstyle tool, the source code for the \mainprogram{} and
-the other Java files must adhere to all of the requirements in the Google Java
-Style Guide available at
-\url{https://google.github.io/styleguide/javaguide.html}. Instead of requiring
-you to manually check that your deliverables adhere to these industry-accepted
-standards, GatorGrader makes it easy for you to automatically check if your
-submission meets the standards for correctness. For instance, GatorGrader will
-run the provided JUnit tests, check to ensure that two source code files contain
-the right number of \program{println} statements, and see that you commit to
-GitHub a sufficient number of times when completing this assignment. The focus
-for this assignment is checking that all of the provided tests correctly pass.
-To get started with the use of GatorGrader, type the command \gatorgraderstart{}
-in your terminal window. Once this step completes you can type
-\gatorgradercheck{}. If your work does not meet all of the assignment's
-requirements, then you will see the following output in your terminal:
-\command{Overall, are there any mistakes in the assignment? Yes}. If you do have
-mistakes in your practical assignment, then you will need to review
-GatorGrader's output, find the mistake, and try to fix it. Once your program is
-building correctly, producing sensible output, and fulfilling at least some of
-the assignment's requirements, you should transfer your files to GitHub using
-the \gitcommit{} and \gitpush{} commands.
+As verified by Checkstyle tool, the source code for \mainprogram{} and its test
+suite must adhere to all of the requirements in the Google Java Style Guide
+available at \url{https://google.github.io/styleguide/javaguide.html}. Instead
+of requiring you to manually check that your deliverables adhere to these
+industry-accepted standards, tools will make it easy for you to automatically
+check if your submission meets the standards for correctness. For instance,
+Gradle will run the provided tests, while GatorGrader will check to ensure that
+\mainprogram{} produces exactly four lines of output and that you committed to
+GitHub a sufficient number of times when completing this assignment. To get
+started with the use of GatorGrader, type the command \gatorgraderstart{} in
+your terminal window. If you have mistakes in your assignment, then you will
+need to review GatorGrader's output, find the mistake, and try to fix it. Once
+your program is building correctly, fulfilling at least some of the assignment's
+requirements, you should transfer your files to GitHub using the \gitcommit{}
+and \gitpush{} commands. For example, if you want to signal that the
+\mainprogramsource{} file has been changed and is ready for transfer to GitHub
+you would first type \gitcommitmainprogram{} in your terminal, followed by
+typing \gitpush{}.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
