@@ -4,25 +4,22 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{March 16}
-\newcommand{\assignmentassignedate}{March 9}
+\newcommand{\assignmentduedate}{November 7}
+\newcommand{\assignmentassignedate}{November 2}
 \newcommand{\assignmentnumber}{Six}
 
 \newcommand{\labyear}{2018}
 \newcommand{\labday}{Friday}
+\newcommand{\labdueday}{Wednesday}
 \newcommand{\labtime}{1:30 pm}
 
 \newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
-\newcommand{\duedate}{Due: \labday, \assignmentduedate, \labyear{} at \labtime{}}
+\newcommand{\duedate}{Due: \labdueday, \assignmentduedate, \labyear{} at \labtime{}}
 
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{Experiment}}
 \newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalsix/experiment/Experiment.java}}
-
-% Edit these commands to give the main program's output details
-
-\newcommand{\mainprogramoutput}{four}
 
 % Edit these commands to give the name to the test suite
 
@@ -36,8 +33,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running and testing program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -87,7 +84,7 @@ descriptive commit message"}}
 \pagestyle{fancy}
 
 \fancyhf{}
-\rhead{Computer Science 112}
+\rhead{Computer Science 101}
 \lhead{Practical Assignment \assignmentnumber{}}
 \rfoot{Page \thepage}
 \lfoot{\duedate}
@@ -100,8 +97,8 @@ descriptive commit message"}}
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 112\\Introduction to Computer Science II\\
-      Spring 2018\\
+      CMPSC 101\\Introduction to Computer Science II\\
+      Fall 2018\\
       \medskip
     \end{center}
     \bf
@@ -210,7 +207,7 @@ new GitHub repository for this assignment, please click the green ``Accept''
 button and then click the link that is prefaced with the label ``Your assignment
 has been created here''. If you accepted the assignment and correctly followed
 these steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-112-Spring-2018/computer-science-112-spring-2018-practical-6-gkapfham''.
+``Allegheny-Computer-Science-101-Fall-2018/computer-science-101-fall-2018-practical-6-gkapfham''.
 
 % Unless you provide the instructor with documentation of the extenuating
 % circumstances that you are facing, not accepting the assignment means that you
@@ -223,14 +220,14 @@ and the output that your program must produce. Now you are ready to download the
 starting materials to your laboratory computer. Click the ``Clone or download''
 button and, after ensuring that you have selected ``Clone with SSH'', please
 copy this command to your clipboard. To enter into your course directory you
-should now type \command{cd cs112S2018}. By typing \command{git clone} in your
+should now type \command{cd cs101F2018}. By typing \command{git clone} in your
 terminal and then pasting in the string that you copied from the GitHub site you
 will download all of the code for this assignment. For instance, if the course
 instructor ran the \command{git clone} command in the terminal, it would look
 like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-112-S2018/computer-science-112-spring-2018-practical-6-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-101-F2018/computer-science-101-fall-2018-practical-6-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
