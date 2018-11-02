@@ -11,7 +11,7 @@
 \newcommand{\labyear}{2018}
 \newcommand{\labday}{Friday}
 \newcommand{\labdueday}{Wednesday}
-\newcommand{\labtime}{1:30 pm}
+\newcommand{\labtime}{9:00 am}
 
 \newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
 \newcommand{\duedate}{Due: \labdueday, \assignmentduedate, \labyear{} at \labtime{}}
@@ -261,9 +261,11 @@ instructor check your project diagram.
 \section*{Evaluating the Performance of Recursion and Iteration}
 
 This primary goal for this assignment is to afford students the opportunity to
-practice creating their own Java classes and JUnit test cases. As such, it is
-your responsibility to study the provided source code and add in all of the new
-code that you need to ensure that the system compiles and runs an experiment to
+practice creating their own Java classes and JUnit test cases. Critically, it is
+important to note that the build of the provided source code will fail because
+it is missing methods that you must implement. As such, it is your
+responsibility to study the provided source code and add in all of the new code
+that you need to ensure that the system compiles and runs an experiment to
 evaluate the efficiency of the \program{RecursiveFactorialComputation} and the
 \program{IterativeFactorialComputation}. Specifically, the equation for the
 factorial sequence is defined as $n! = n \times n-1 \times n-2 \times \ldots
@@ -274,21 +276,24 @@ implementation of the \program{public long compute(int value)} method in the
 please make sure that you correctly set the name of this class so that it
 integrates correctly into the experimentation framework. Finally, make sure that
 you understand how this Java class relates to and is tested by the others that
-are the needed for this practical assignment.
+are the needed for this practical assignment. Make sure to consult your diagram!
 
 Using a loop, you should also create a \program{compute} method in
 \program{IterativeFactorialComputation}. Students who want to learn more about
 the numerical values in the factorial sequence are encouraged to visit the web
-site \url{http://www.tsm-resources.com/alists/fact.html}. Once you have
-implemented methods that pass your own test suite and compute the correct
+site \url{http://www.tsm-resources.com/alists/fact.html}. You can also learn
+more about the properties of and values in the factorial sequence by visiting
+the web site \url{https://www.mathsisfun.com/numbers/factorial.html}. Once you
+have implemented methods that pass your own test suite and compute the correct
 numerical values, you are ready to run a doubling experiment. Please proceed
 cautiously as you run the experiments: it is possible that one or more of the
-algorithms may not be efficient, thus potentially requiring extended periods of
-time to run an experiment campaign. With that said, if it is necessary to do so
-you should determine what inputs lead to poor performance and then explain why
-this poor performance is evident. Finally, please bear in mind that the
-numerical values in the factorial sequence grow very rapidly and thus even the
-\program{long} data type may not be able to correctly store the computed values.
+algorithms may not be efficient, thus potentially requiring either extended
+periods of time to run an experiment campaign or program crashes. With that
+said, if it is necessary to do so you should determine what inputs lead to poor
+performance and/or crashes and then explain why they are evident. Finally,
+please bear in mind that the numerical values in the factorial sequence grow
+very rapidly and thus even the \program{long} data type may not be able to
+correctly store the computed values.
 
 \section*{Checking the Correctness of Your Program}
 
