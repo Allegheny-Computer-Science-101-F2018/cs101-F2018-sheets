@@ -18,6 +18,7 @@ script:
 - latexmk -pdf -outdir=_build practical05/cs101F2018_practical05.tex
 - latexmk -pdf -outdir=_build practical06/cs101F2018_practical06.tex
 - latexmk -pdf -outdir=_build quiz01/cs101F2018_studyguide_quiz01.tex
+- latexmk -pdf -outdir=_build quiz01/cs101F2018_studyguide_exam01.tex
 deploy:
   provider: releases
   api_key:
