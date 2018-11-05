@@ -376,14 +376,20 @@ if you have questions about any of the content listed in this section.
 
   \item A strategy for timing the implementation of an algorithm in Java
 
+  \item An understand of the trade-offs associated with different timer
+    ``resolutions''
+
   \item The challenges associated with experimentally studying an algorithm's
     performance
 
   \item A comprehensive understanding of how to use a doubling experiment to
     study efficiency
 
-  \item The challenges associated with conduct an experimental evaluation of an
-    algorithm
+  \item Practical ways to run a rigorous doubling experiment to assess an algorithm's
+    performance
+
+  \item The challenges associated with conducting an experimental evaluation of
+    an algorithm
 
   \item The meaning and purpose of the terms ``basic operation'' and ``psuedo code''
 
@@ -393,7 +399,7 @@ if you have questions about any of the content listed in this section.
   \item Knowledge of the seven functions used to characterize an algorithm's
     complexity class
 
-  \item The relationship between an order of growth ratio and the worst-case
+  \item The relationship between an order-of-growth ratio and the worst-case
     time complexity
 
   \item The meaning of the ``Big-Oh'' notation used during the
@@ -412,11 +418,16 @@ if you have questions about any of the content listed in this section.
 
 \begin{itemize}
 
+  \item The similarities and differences between recursive and iteration
+
   \item How to use a recursive approach to solving a problem (e.g., the base
     and recursive cases)
 
   \item Knowledge of recursive algorithms for arithmetic computation (e.g., factorial
     and Fibonacci)
+
+  \item How to draw a technical diagram to explain the run-time behavior of a
+    recursive algorithm
 
   \item How to determine and justify the worst-case time complexity for
     the recursive factorial method
@@ -433,10 +444,17 @@ if you have questions about any of the content listed in this section.
   \item The ability to explain why the ``traditional'' recursive Fibonacci
     method is inefficient
 
-  \item The way in which the Java programming language run recursive methods
+  \item The way in which the Java programming language's environment runs
+    recursive methods
 
   \item An understanding of why a recursive method can cause a ``stack
     overflow'' error
+
+  \item How to configure the Java virtual machine to support a larger maximum
+    stack depth
+
+  \item A strategy for deciding between the recursive and iterative
+    implementations of an algorithm
 
   \item The meaning and behavior of a Java method that has an infinite recursion
 
