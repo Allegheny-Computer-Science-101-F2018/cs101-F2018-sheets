@@ -38,6 +38,7 @@ deploy:
     - _build/cs101F2018_practical05.pdf
     - _build/cs101F2018_practical06.pdf
     - _build/cs101F2018_studyguide_quiz01.pdf
+    - _build/cs101F2018_studyguide_exam01.pdf
   skip_cleanup: true
   on:
     tags: true
