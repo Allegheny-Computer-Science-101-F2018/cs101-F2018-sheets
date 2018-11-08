@@ -101,7 +101,7 @@ descriptive commit message"}}
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 101\\Introduction to Computer Science II\\
+      CMPSC 101\\Data Abstraction\\
       Fall 2018\\
       \medskip
     \end{center}
@@ -248,18 +248,19 @@ required source code. With that said, the remainder of this section will provide
 some pointers to help you to implement the needed code. This assignment asks you
 to run experiments that produce output like that which Figure~\ref{fig:output}
 provides. This figure shows that now you must conduct an experiment with the
-\program{QuickSort} algorithm provided by the \program{Arrays.sort} method. Before you
-start calling this method, please take time to read the JavaDoc documentation
-for it. What sorting algorithm does \program{Arrays.sort} use? What is the
-worst-case time complexity for this method? Why is this approach to sorting
-faster than a version that does not use these ``pivots''? If you have questions
-about this method, then please ask the instructor. Now, you are ready to
-implement methods like \program{public char[] sort(char[] source)} for
-\program{QuickSort}. Also, don't forget to add all of the correct
-\program{println} calls so that the output matches that which you see in your
-GitHub repository. Finally, if you have extra time, please consider extending
-the benchmarking framework so that it supports different type of input arrays
-(e.g., reversed arrays).
+\program{QuickSort} algorithm provided by the \program{Arrays.sort} method.
+Before you start calling this method, please take time to read the JavaDoc
+documentation for it. What sorting algorithm does \program{Arrays.sort} use?
+What is the worst-case time complexity for this method? Why is this approach to
+sorting faster than a version that does not use these ``pivots''? If you have
+questions about this method, then please ask the instructor. Now, you are ready
+to implement methods like \program{public char[] sort(char[] source)} for
+\program{QuickSort}. Also, don't forget to add the required source code for the
+\program{BubbleSort} algorithm. Before you start to run experiments, please make
+sure that all of the tests pass for all of the sorting algorithms! Finally, if
+you have extra time, please consider extending the benchmarking framework so
+that it supports different type of input arrays (e.g., reversed arrays or arrays
+with data that is already sorted).
 
 It is worth pointing out that your textbook contains several useful insights
 into the pattern that you should follow when thinking about the running time of
@@ -303,27 +304,24 @@ you do not understand the data table in Figure~\ref{fig:output}.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by the Checkstyle tool, the source code for the \mainprogram{} and
-the other Java classes must adhere to all of the requirements in the Google Java
-Style Guide available at
-\url{https://google.github.io/styleguide/javaguide.html}. Instead of requiring
-you to manually check that your deliverables adhere to these industry-accepted
-standards, GatorGrader makes it easy for you to automatically check if your
-submission meets the standards for correctness. For instance, GatorGrader will
-run the provided JUnit tests, check to ensure that two source code files contain
-the right number of \program{println} statements, and see that you commit to
-GitHub a sufficient number of times when completing this assignment. The focus
-for this assignment is checking that all of the provided tests correctly pass.
-To get started with the use of GatorGrader, type the command \gatorgraderstart{}
-in your terminal window. Once this step completes you can type
-\gatorgradercheck{}. If your work does not meet all of the assignment's
-requirements, then you will see the following output in your terminal:
-\command{Overall, are there any mistakes in the assignment? Yes}. If you do have
-mistakes in your practical assignment, then you will need to review
-GatorGrader's output, find the mistake, and try to fix it. Once your program is
-building correctly, producing sensible output, and fulfilling at least some of
-the assignment's requirements, you should transfer your files to GitHub using
-the \gitcommit{} and \gitpush{} commands.
+As verified by Checkstyle tool, the source code for \mainprogram{} and its test
+suite must adhere to all of the requirements in the Google Java Style Guide
+available at \url{https://google.github.io/styleguide/javaguide.html}. Instead
+of requiring you to manually check that your deliverables adhere to these
+industry-accepted standards, tools will make it easy for you to automatically
+check if your submission meets the standards for correctness. For instance,
+Gradle will run the provided tests, while GatorGrader will check to ensure that
+\mainprogram{} uses the correct number of \command{println} statements and that
+you committed to GitHub a sufficient number of times during this assignment. To
+get started with the use of GatorGrader, type the command \gatorgraderstart{}
+in your terminal window. If you have mistakes in your assignment, then you will
+need to review GatorGrader's output, find the mistake, and try to fix it. Once
+your program is building correctly, fulfilling at least some of the
+assignment's requirements, you should transfer your files to GitHub using the
+\gitcommit{} and \gitpush{} commands. For example, if you want to signal that
+the \mainprogramsource{} file has been changed and is ready for transfer to
+GitHub you would first type \gitcommitmainprogram{} in your terminal, followed
+by typing \gitpush{}.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
