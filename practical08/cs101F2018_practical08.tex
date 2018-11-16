@@ -37,8 +37,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running and testing program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -229,7 +229,7 @@ instructor ran the \command{git clone} command in the terminal, it would look
 like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-practical-7-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-practical-8-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -293,7 +293,7 @@ of the textbook. Taking into consideration that the \mainprogram{} employs
 header and trailer sentinels, your \program{equals} method should determine if
 two instances contain the same data values. For inspiration, you can see a full
 example of an \program{equals} method for the \program{SinglyLinkedList} by
-looking at the source code for the most recent practical assignment. Make sure
+looking at the source code for the most recent laboratory assignment. Make sure
 that your \program{equals} does not call a method on a \program{null} object!
 
 % Remember, if you want to \step{build} your program you can type the command
@@ -316,20 +316,18 @@ run your tests and check to ensure that certain files, like
 \mainprogramsource{}, contain the right number of \program{println} statements.
 
 To get started with the use of GatorGrader, type the command
-\gatorgraderstart{} in your terminal window. Once this step completes you can
-type \gatorgradercheck{}. If your work does not meet all of the assignment's
-requirements, then you will see the following output in your terminal:
-\command{Overall, are there any mistakes in the assignment? Yes}. If you do
-have mistakes in your assignment, then you will need to review GatorGrader's
-output, find the mistake, and try to fix it. Once your program is building
+\gatorgraderstart{} in your terminal window. If your assignment's code does not
+meet all of the project's requirements, then you will see a summary of the
+failing checks along with a statement giving the percentage of checks that are
+currently passing. If you have mistakes in your assignment, then you will need
+to review GatorGrader's output, find the mistake, and try to fix it, consulting
+your text book and course notes as needed. Once your program is building
 correctly, fulfilling at least some of the assignment's requirements, you
 should transfer your files to GitHub using the \gitcommit{} and \gitpush{}
 commands. For example, if you want to signal that the \mainprogramsource{} file
 has been changed and is ready for transfer to GitHub you would first type
 \gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and
-checking to see that the transfer to GitHub is successful. If you notice that
-your code transfer did not work, then please try to determine why, asking the
-instructor for assistance, if necessary.
+checking to see that the transfer worked.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
@@ -362,7 +360,9 @@ to submit, using GitHub, the following deliverables.
 
 \item A properly documented and correct version of all the Java source files
   (i.e., the \mainprogram{} and its JUnit test suite) that meets the set
-  requirements and produces the desired output.
+  requirements and produces the desired output. Along with adding the required
+  output code, you must implement methods that remove the last node from and
+  perform equivalence testing on the \program{DoublyLinkedList} data structure.
 
 \end{enumerate}
 
