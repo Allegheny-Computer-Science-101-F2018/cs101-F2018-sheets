@@ -4,9 +4,9 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{April 4}
-\newcommand{\assignmentassignedate}{March 30}
-\newcommand{\assignmentnumber}{Seven}
+\newcommand{\assignmentduedate}{November 19}
+\newcommand{\assignmentassignedate}{November 16}
+\newcommand{\assignmentnumber}{Eight}
 
 \newcommand{\labyear}{2018}
 \newcommand{\labday}{Friday}
@@ -19,7 +19,7 @@
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{DoublyLinkedList}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalseven/list/DoublyLinkedList.java}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicaleight/list/DoublyLinkedList.java}}
 
 % Edit these commands to give the main program's output details
 
@@ -28,7 +28,7 @@
 % Edit these commands to give the name to the test suite
 
 \newcommand{\testprogram}{\lstinline{TestDoublyLinkedList}}
-\newcommand{\testprogramsource}{\lstinline{src/test/java/practicalseven/TestDoublyLinkedList.java}}
+\newcommand{\testprogramsource}{\lstinline{src/test/java/practicaleight/TestDoublyLinkedList.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -57,7 +57,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalseven/list/DoublyLinkedList.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicaleight/list/DoublyLinkedList.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -88,7 +88,7 @@ descriptive commit message"}}
 \pagestyle{fancy}
 
 \fancyhf{}
-\rhead{Computer Science 112}
+\rhead{Computer Science 101}
 \lhead{Practical Assignment \assignmentnumber{}}
 \rfoot{Page \thepage}
 \lfoot{\duedate}
@@ -101,8 +101,8 @@ descriptive commit message"}}
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 112\\Introduction to Computer Science II\\
-      Spring 2018\\
+      CMPSC 101\\Data Abstraction\\
+      Fall 2018\\
       \medskip
     \end{center}
     \bf
@@ -134,10 +134,10 @@ assess your progress towards correctly completing the project.
 \begin{itemize}
   \setlength{\itemsep}{0pt}
 
-\item {\bf Use the laboratory computers}. The computers in this laboratory feature specialized software for completing
-  this course's laboratory and practical assignments. If it is necessary for you to work on a different machine, be sure
-  to regularly transfer your work to a laboratory machine so that you can check its correctness. If you cannot use a
-  laboratory computer and you need help with the configuration of your own laptop, then please carefully explain its
+\item {\bf Use the practical computers}. The computers in this practical feature specialized software for completing
+  this course's practical and practical assignments. If it is necessary for you to work on a different machine, be sure
+  to regularly transfer your work to a practical machine so that you can check its correctness. If you cannot use a
+  practical computer and you need help with the configuration of your own laptop, then please carefully explain its
   setup to a teaching assistant or the course instructor when you are asking questions.
 
 \item {\bf Follow each step carefully}. Slowly read each sentence in the assignment sheet, making sure that you
@@ -145,7 +145,7 @@ assess your progress towards correctly completing the project.
   the challenges that you faced. If you are stuck, then please tell a teaching assistant or instructor what assignment
   step you recently completed.
 
-\item {\bf Regularly ask and answer questions}. Please log into Slack at the start of a laboratory or practical session
+\item {\bf Regularly ask and answer questions}. Please log into Slack at the start of a practical or practical session
   and then join the appropriate channel. If you have a question about one of the steps in an assignment, then you can
   post it to the designated channel. Or, you can ask a student sitting next to you or talk with a teaching assistant or
   the course instructor.
@@ -158,7 +158,7 @@ assess your progress towards correctly completing the project.
 
 \item {\bf Keep all of your files}. Don't delete your programs, output files, and written reports after you submit them
   through GitHub; you will need them again when you study for the quizzes and examinations and work on the other
-  laboratory, practical, and final project assignments.
+  practical, practical, and final project assignments.
 
 \item {\bf Back up your files regularly}. All of your files are regularly backed-up to the servers in the Department of
   Computer Science and, if you commit your files regularly, stored on GitHub. However, you may want to use a flash
@@ -166,7 +166,7 @@ assess your progress towards correctly completing the project.
   any type of system failure, you are responsible for ensuring that you have access to a recent backup copy of all your
   files.
 
-\item {\bf Explore teamwork and technologies}. While certain aspects of the laboratory assignments will be challenging
+\item {\bf Explore teamwork and technologies}. While certain aspects of the practical assignments will be challenging
   for you, each part is designed to give you the opportunity to learn both fundamental concepts in the field of computer
   science and explore advanced technologies that are commonly employed at a wide variety of companies. To explore and
   develop new ideas, you should regularly communicate with your team and/or the teaching assistants and tutors.
@@ -191,7 +191,7 @@ Guides'', available at \url{https://guides.github.com/}, that explain how to use
 many of the features that GitHub provides. In particular, please make sure that
 you have read guides such as ``Mastering Markdown'' and ``Documenting Your
 Projects on GitHub''; each of them will help you to understand how to use both
-GitHub and GitHub Classroom. To do well on this laboratory assignment, you
+GitHub and GitHub Classroom. To do well on this practical assignment, you
 should also read Section 1.5.2 in the textbook, paying particularly close
 attention to the material about iteration constructs. You should also review the
 content about lists and equivalence testing in Sections 3.3 through 3.6. Please
@@ -199,7 +199,7 @@ see the course instructor if you have questions about these reading assignments.
 
 \section*{Accessing the Practical Assignment on GitHub}
 
-To access the laboratory assignment, you should go into the
+To access the practical assignment, you should go into the
 \channel{\#announcements} channel in our Slack team and find the announcement
 that provides a link for it. Copy this link and paste it into a web browser.
 Now, you should accept the assignment and see that GitHub Classroom created a
@@ -209,7 +209,7 @@ new GitHub repository for this assignment, please click the green ``Accept''
 button and then click the link that is prefaced with the label ``Your assignment
 has been created here''. If you accepted the assignment and correctly followed
 these steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-112-Spring-2018/computer-science-112-spring-2018-practical-7-gkapfham''.
+``Allegheny-Computer-Science-101-Fall-2018/computer-science-101-fall-2018-practical-8-gkapfham''.
 
 % Unless you provide the instructor with documentation of the extenuating
 % circumstances that you are facing, not accepting the assignment means that you
@@ -219,17 +219,17 @@ Before you move to the next step of this assignment, please make sure that you
 read all of the content on the web site for your new GitHub repository, paying
 close attention to the technical details about the commands that you will type
 and the output that your program must produce. Now you are ready to download the
-starting materials to your laboratory computer. Click the ``Clone or download''
+starting materials to your practical computer. Click the ``Clone or download''
 button and, after ensuring that you have selected ``Clone with SSH'', please
 copy this command to your clipboard. To enter into your course directory you
-should now type \command{cd cs112S2018}. By typing \command{git clone} in your
+should now type \command{cd cs101S2018}. By typing \command{git clone} in your
 terminal and then pasting in the string that you copied from the GitHub site you
 will download all of the code for this assignment. For instance, if the course
 instructor ran the \command{git clone} command in the terminal, it would look
 like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-112-S2018/computer-science-112-spring-2018-practical-7-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-practical-7-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -293,7 +293,7 @@ of the textbook. Taking into consideration that the \mainprogram{} employs
 header and trailer sentinels, your \program{equals} method should determine if
 two instances contain the same data values. For inspiration, you can see a full
 example of an \program{equals} method for the \program{SinglyLinkedList} by
-looking at the source code for the most recent laboratory assignment. Make sure
+looking at the source code for the most recent practical assignment. Make sure
 that your \program{equals} does not call a method on a \program{null} object!
 
 % Remember, if you want to \step{build} your program you can type the command
