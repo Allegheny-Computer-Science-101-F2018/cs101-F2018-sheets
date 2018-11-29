@@ -4,17 +4,18 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{May 4}
-\newcommand{\assignmentassignedate}{April 17}
+\newcommand{\assignmentduedate}{December 14}
+\newcommand{\assignmentassignedate}{November 29}
 \newcommand{\assignmentnumber}{Ten}
 
 \newcommand{\labyear}{2018}
-\newcommand{\labday}{Tuesday}
+\newcommand{\labday}{Thursday}
+\newcommand{\labdueday}{Friday}
 \newcommand{\labtime}{2:30 pm}
-\newcommand{\labduetime}{11:59 pm}
+\newcommand{\labduetime}{11:00 pm}
 
 \newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
-\newcommand{\duedate}{Due: \labday, \assignmentduedate, \labyear{} at \labduetime{}}
+\newcommand{\duedate}{Due: \labdueday, \assignmentduedate, \labyear{} at \labduetime{}}
 
 % Edit this commands to describe key deliverables
 
@@ -72,7 +73,7 @@
 \pagestyle{fancy}
 
 \fancyhf{}
-\rhead{Computer Science 112}
+\rhead{Computer Science 101}
 \lhead{Final Project}
 \rfoot{Page \thepage}
 \lfoot{\duedate}
@@ -85,8 +86,8 @@
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 112\\Introduction to Computer Science II\\
-      Spring 2018\\
+      CMPSC 101\\Data Abstraction\\
+      Fall 2018\\
       \medskip
     \end{center}
     \bf
@@ -134,23 +135,31 @@ project proposal and a status update at the intermediate deadlines.
 \begin{itemize}
   \setlength{\itemsep}{0pt}
 
-\item {\bf Use the laboratory computers}. The computers in this laboratory feature specialized software for completing
-  this course's laboratory and practical assignments. If it is necessary for you to work on a different machine, be sure
-  to regularly transfer your work to a laboratory machine so that you can check its correctness. If you cannot use a
-  laboratory computer and you need help with the configuration of your own laptop, then please carefully explain its
-  setup to a teaching assistant or the course instructor when you are asking questions.
+\item {\bf Use the laboratory computers}. The computers in this laboratory
+  feature specialized software for completing this course's laboratory and
+  practical assignments. If it is necessary for you to work on a different
+  machine, be sure to regularly transfer your work to a laboratory machine so
+  that you can check its correctness. If you cannot use a laboratory computer
+  and you need help with the configuration of your own laptop, then please
+  carefully explain its setup to a teaching assistant or the course instructor
+  when you are asking questions.
 
-\item {\bf Store your files in GitHub}. As in the past laboratory assignments, you will be responsible for storing all
-  of your files (e.g., Java source code and Markdown-based writing) in a Git repository using GitHub Classroom. Please
-  verify that you have saved your source code in your Git repository by using \command{git status} to ensure that
-  everything is updated. You can see if your assignment submission meets the established correctness requirements by
-  using the provided checking tools on your local computer and by checking the commits in GitHub.
+\item {\bf Store your files in GitHub}. As in the past laboratory assignments,
+  you will be responsible for storing all of your files (e.g., Java source code
+  and Markdown-based writing) in a Git repository using GitHub Classroom. Please
+  verify that you have saved your source code in your Git repository by using
+  \command{git status} to ensure that everything is updated. You can see if your
+  assignment submission meets the established correctness requirements by using
+  the provided checking tools on your local computer and by checking the commits
+  in GitHub.
 
-\item {\bf Back up your files regularly}. All of your files are regularly backed-up to the servers in the Department of
-  Computer Science and, if you commit your files regularly, stored on GitHub. However, you may want to use a flash
-  drive, Google Drive, or your favorite backup method to keep an extra copy of your files on reserve. In the event of
-  any type of system failure, you are responsible for ensuring that you have access to a recent backup copy of all your
-  files.
+\item {\bf Back up your files regularly}. All of your files are regularly
+  backed-up to the servers in the Department of Computer Science and, if you
+  commit your files regularly, stored on GitHub. However, you may want to use a
+  flash drive, Google Drive, or your favorite backup method to keep an extra
+  copy of your files on reserve. In the event of any type of system failure, you
+  are responsible for ensuring that you have access to a recent backup copy of
+  all your files.
 
 \item {\bf Explore teamwork and technologies}. While certain aspects of the
   final project will be challenging for you, each part is designed to give you
@@ -200,17 +209,16 @@ Now, your team should look into the \channel{\#announcements} channel on Slack
 and claim the next available number for your team.
 
 Next, the team leader (i.e., the person you chose to complete this step) will
-create their team with the name
-\command{Computer-Science-112-Spring-2018-Lab-10-Group-<group label>} and then
-accept the project assignment and see that GitHub Classroom created a new
-GitHub repository for your team to access the assignment's starting materials
-and to store the completed version of your assignment. Note that the team leader
-will have to type their group and lab details into a text field. For instance,
-if the team leader was in the second group then that person would type ``Group 2
-for Lab 10'' into the text field. At this point, each additional member of the
-team can accept the assignment through GitHub. Please make sure that each of
-your team members joins the correct team---you must be in the team with your
-number. Unless you provide the instructor with documentation of the extenuating
+create their team with the name \command{Team-<team label>} and then accept the
+project assignment and see that GitHub Classroom created a new GitHub
+repository for your team to access the assignment's starting materials and to
+store the completed version of your assignment. Note that the team leader will
+have to type their team and lab details into a text field. For instance, if the
+team leader was in the second team then that person would type ``Group 2 for
+Lab 10'' into the text field. At this point, each additional member of the team
+can accept the assignment through GitHub. Please make sure that each of your
+team members joins the correct team---you must be in the team with your number.
+Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it. Please see the instructor with
 questions.
@@ -222,7 +230,7 @@ and any extra steps that you must take. Now you are ready to download the
 starting materials to your laboratory computer. Click the ``Clone or download''
 button and, after ensuring that you have selected ``Clone with SSH'', please
 copy this command to your clipboard. To enter the correct directory you should
-now type \command{cd cs112S2018}. Next, you can type the command \command{ls}
+now type \command{cd cs101S2018}. Next, you can type the command \command{ls}
 and see that there are some files or directories inside of this directory. By
 typing \command{git clone} in your terminal and then pasting in the string that
 you copied from the GitHub site you will download all of the code for this
@@ -230,7 +238,7 @@ assignment. For the previous example, a student would run a \command{git clone}
 command in the terminal in this fashion:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-112-S2018/computer-science-112-spring-2018-lab-10-group-2-for-lab-10.git
+  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-lab-10-team-2-for-lab-10.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
