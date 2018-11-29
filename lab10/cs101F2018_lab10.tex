@@ -27,8 +27,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -210,18 +210,20 @@ and claim the next available number for your team.
 
 Next, the team leader (i.e., the person you chose to complete this step) will
 create their team with the name \command{Team-<team label>} and then accept the
-project assignment and see that GitHub Classroom created a new GitHub
-repository for your team to access the assignment's starting materials and to
-store the completed version of your assignment. Note that the team leader will
-have to type their team and lab details into a text field. For instance, if the
-team leader was in the second team then that person would type ``Group 2 for
-Lab 10'' into the text field. At this point, each additional member of the team
-can accept the assignment through GitHub. Please make sure that each of your
-team members joins the correct team---you must be in the team with your number.
-Unless you provide the instructor with documentation of the extenuating
-circumstances that you are facing, not accepting the assignment means that you
-automatically receive a failing grade for it. Please see the instructor with
-questions.
+project assignment and see that GitHub Classroom created a new GitHub repository
+for your team to access the assignment's starting materials and to store the
+completed version of your assignment. Note that the team leader will have to
+type their team and lab details into a text field. For instance, if the team
+leader was in the second team then that person would type ``Team 2'' into the
+text field. At this point, each additional member of the team can accept the
+assignment through GitHub. Please make sure that each of your team members joins
+the correct team---you must be in the team with your number and not in another
+person's team. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, not accepting the assignment
+means that you automatically receive a failing grade for it. Please see the
+instructor with questions.
+
+% NOTE: Might need to include a different team name if I do more group work
 
 Before you move to the next step of this assignment, please make sure that you
 read all of the content on the web site for your new GitHub repository, paying
@@ -238,7 +240,7 @@ assignment. For the previous example, a student would run a \command{git clone}
 command in the terminal in this fashion:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-lab-10-team-2-for-lab-10.git
+  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-lab-10-team-2.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
