@@ -221,7 +221,7 @@ the correct team---you must be in the team with your number and not in another
 person's team. Unless you provide the instructor with documentation of the
 extenuating circumstances that you are facing, not accepting the assignment
 means that you automatically receive a failing grade for it. Please see the
-instructor with questions.
+course instructor with any questions that you have.
 
 % NOTE: Might need to include a different team name if I do more group work
 
@@ -232,7 +232,7 @@ and any extra steps that you must take. Now you are ready to download the
 starting materials to your laboratory computer. Click the ``Clone or download''
 button and, after ensuring that you have selected ``Clone with SSH'', please
 copy this command to your clipboard. To enter the correct directory you should
-now type \command{cd cs101S2018}. Next, you can type the command \command{ls}
+now type \command{cd cs101F2018}. Next, you can type the command \command{ls}
 and see that there are some files or directories inside of this directory. By
 typing \command{git clone} in your terminal and then pasting in the string that
 you copied from the GitHub site you will download all of the code for this
@@ -240,16 +240,20 @@ assignment. For the previous example, a student would run a \command{git clone}
 command in the terminal in this fashion:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-lab-10-team-2.git
+  git clone git@github.com:Allegheny-Computer-Science-101-F2018/computer-science-101-fall-2018-lab-10-team-2.git
 \end{lstlisting}
 
-After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
-one directory from your current location, then you can type the command \command{cd ..}. You may continue to use the
-\command{cd} and \command{ls} commands to explore the files that you automatically downloaded from GitHub. Please note
-that the course instructor expects students to implement and evaluate all of the Java source code needed to complete
-their proposed project. As such, there are no provided Java source code files for this assignment. With that said, you
-will need to edit the three Markdown files in the \program{writing/} directory by the stated deadline. Here are some
-additional tips to help you design, implement, and test the Java source code for the final project:
+After this command finishes, you can use \command{cd} to change into the new
+directory. If you want to \step{go back} one directory from your current
+location, then you can type the command \command{cd ..}. You may continue to use
+the \command{cd} and \command{ls} commands to explore the files that you
+automatically downloaded from GitHub. Please note that the course instructor
+expects students to implement and evaluate all of the Java source code needed to
+complete their proposed project. As such, there are no provided Java source code
+files for this assignment. With that said, you will need to edit the three
+Markdown files in the \program{writing/} directory by the stated deadline. Here
+are some additional tips to help you design, implement, and test the Java source
+code for the final project:
 
 \begin{itemize}
   \setlength{\itemsep}{0in}
@@ -259,10 +263,12 @@ additional tips to help you design, implement, and test the Java source code for
   \item Update the \program{settings.gradle} file so that it also references the correct directory.
   \item Make sure that your \program{build.gradle} file is setup to support graphical and/or textual output.
   \item Remember that all of your Java source code must meet Google's programming standards.
-  \item Recall that there are no GatorGrader checks for this assignment since each project is different.
+  \item Recall that there are no GatorGrader code checks since each final project is different.
   \item In GatorGrader's absence, your team should establish correctness checks for your source code.
   \item Importantly, your team must implement JUnit tests to assess
     Java program correctness.
+  \item Make sure that all of your team's members regularly commit to your
+    GitHub repository
 \end{itemize}
 
 \section*{Description of the Topics}
