@@ -10,7 +10,7 @@
 
 \newcommand{\labyear}{2018}
 \newcommand{\labday}{Friday}
-\newcommand{\labtime}{2:30 pm}
+\newcommand{\labtime}{9:00 am}
 
 \newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
 \newcommand{\duedate}{Due: \labday, \assignmentduedate, \labyear{} at \labtime{}}
@@ -100,7 +100,7 @@ descriptive commit message"}}
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 101\\Introduction to Computer Science II\\
+      CMPSC 101\\Data Abstraction\\
       Fall 2018\\
       \medskip
     \end{center}
@@ -206,11 +206,12 @@ Now, you should accept the assignment and see that GitHub Classroom created a
 new GitHub repository for you to access the assignment's starting materials and
 to store the completed version of your assignment. Specifically, to access your
 new GitHub repository for this assignment, please click the green ``Accept''
-button and then click the link that is prefaced with the label ``Your assignment
-has been created here''. If you accepted the assignment and correctly followed
-these steps, you should have created a GitHub repository with a name like
+button and then click the link that is prefaced with the label ``Your
+assignment has been created here''. If you accepted the assignment and
+correctly followed these steps, you should have created a GitHub repository
+with a name like
 ``Allegheny-Computer-Science-101-Fall-2018/computer-science-101-fall-2018-lab-9-gkapfham''.
-Unless you provide the course instructor with documentation of the extenuating
+Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it.
 
@@ -221,14 +222,14 @@ and the output that your program must produce. Now you are ready to download the
 starting materials to your laboratory computer. Click the ``Clone or download''
 button and, after ensuring that you have selected ``Clone with SSH'', please
 copy this command to your clipboard. To enter into your course directory you
-should now type \command{cd cs101S2018}. By typing \command{git clone} in your
+should now type \command{cd cs101F2018}. By typing \command{git clone} in your
 terminal and then pasting in the string that you copied from the GitHub site you
 will download all of the code for this assignment. For instance, if the course
 instructor ran the \command{git clone} command in the terminal, it would look
 like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-101-S2018/computer-science-101-fall-2018-lab-9-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-101-F2018/computer-science-101-fall-2018-lab-9-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -306,24 +307,27 @@ established by the \step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/}. Instead of requiring you to
 manually check that your deliverables adhere to these industry-accepted
 standards, GatorGrader makes it easy for you to automatically check if your
-submission meets the standards for correctness. For instance, GatorGrader will
-run the provided JUnit tests, check to ensure that a source code files contains
-the right number of \program{println} statements, and see that you commit to
-GitHub a sufficient number of times when completing this assignment. The focus
-for this assignment is checking that all of the provided tests correctly pass.
+submission meets the standards for correctness. For instance, Gradle will run
+the provided JUnit tests and GatorGrader will check to ensure that a source code
+files contains the right number of \program{println} statements and see that you
+commit to GitHub a sufficient number of times when completing this assignment.
+The focus of this assignment is checking to ensure that the tests pass and do
+not lead to either \program{java.lang.Exception} or
+\program{java.lang.AssertionError}.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{}
-in your terminal window. Once this step completes you can type
-\gatorgradercheck{}. If your work does not meet all of the assignment's
-requirements, then you will see the following output in your terminal:
-\command{Overall, are there any mistakes in the assignment? Yes}. If you do have
-mistakes in your assignment, then you will need to review GatorGrader's output,
-find the mistake, and try to fix it. Once your program is building correctly,
+in your terminal window. If your laboratory work does not meet all of the
+assignment's requirements, then you will see a summary of the failing checks
+along with a statement giving the percentage of checks that are currently
+passing. If you have mistakes in your assignment, then you will need to review
+GatorGrader's output, find the mistake, and try to fix it, consulting your text
+book and course notes as needed. Once your program is building correctly,
 fulfilling at least some of the assignment's requirements, you should transfer
-your files to GitHub using the \gitcommit{} and \gitpush{} commands. If you
-notice that transferring your code or writing to GitHub did not work, then
-please try to determine why, asking a teaching assistant or the instructor for
-assistance.
+your files to GitHub using the \gitcommit{} and \gitpush{} commands. For
+example, if you want to signal that the \mainprogramsource{} file has been
+changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and
+checking to see that the transfer worked.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
