@@ -54,6 +54,7 @@ deploy:
     - _build/cs101F2018_studyguide_quiz01.pdf
     - _build/cs101F2018_studyguide_quiz02.pdf
     - _build/cs101F2018_studyguide_exam01.pdf
+    - _build/cs101F2018_studyguide_exam02.pdf
   skip_cleanup: true
   on:
     tags: true
